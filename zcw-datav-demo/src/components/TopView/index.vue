@@ -3,22 +3,22 @@
     <el-row :gutter="20">
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮时显示
+          <total-sales/>
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮时显示
+          <total-orders/>
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮时显示
+          <today-users/>
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮时显示
+          <total-users/>
         </el-card>
       </el-col>
     </el-row>
@@ -26,8 +26,24 @@
 </template>
 
 <script>
+import TotalSales from '../TotalSales'
+import TodayUsers from '../TodayUsers'
+import TotalOrders from '../TotalOrders'
+import TotalUsers from '../TotalUsers'
+
 export default {
-  name: 'TopView'
+  name: 'TopView',
+  /* 组件注册 */
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    TotalSales,
+    // eslint-disable-next-line vue/no-unused-components
+    TodayUsers,
+    // eslint-disable-next-line vue/no-unused-components
+    TotalOrders,
+    // eslint-disable-next-line vue/no-unused-components
+    TotalUsers
+  }
 }
 </script>
 
