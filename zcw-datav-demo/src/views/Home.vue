@@ -17,11 +17,11 @@ import SalesView from './../components/SalesView'
 
 export default {
   name: 'Home',
-  comments: {
-    TopView,
-    BottomView,
-    MapView,
-    SalesView
+  components: {
+    'top-view': TopView,
+    'bottom-view': BottomView,
+    'map-view': MapView,
+    'sales-view': SalesView
   }
 }
 </script>
