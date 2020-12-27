@@ -1,5 +1,5 @@
 <template>
-    <v-chart :options="data"/>
+    <vue-line :data="data"/>
 </template>
 
 <script>
@@ -8,16 +8,11 @@ export default {
   data () {
     return {
       data: {
-        xAxis: {
-          typ: 'category'
-        },
-        yAxis: {
-
-        },
-        series: [{
-          type: 'line',
-          data: [100, 200, 300]
-        }]
+        columns: ['日期', '销售额'],
+        rows: [
+          { 日期: '1月1日', 销售额: 123 },
+          { 日期: '1月2日', 销售额: 343 }
+        ]
       }
     }
   }
